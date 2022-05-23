@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link ref="stylesheet" href ="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Mulish:wght@200&display=swap" rel="stylesheet">
     <title>Notas</title>
 </head>
 <body>
-    <h1>Lista de Tareas</h1>
+    <div class="list roundBorder">
+        <div class="date">
+            <div class="dateLeft">
+                <div id="dateNumber"></div>
+                <div>
+                    <div id="dateMonth"></div>
+                    <div id="dateYear"></div>
+                </div>
+            </div>
+            <div id="dateText"></div>
+        </div>
+        <form onsubmit="addNewTask(event)">
+            <input type="text" autocomplete="off" name="taskText" placeholder="Nueva tarea">
+            <button type="submit" class="addTaskButton"> + </button>
+            <button type="button" class="orderButton roundBorder" onclick="renderOrdererTask()"> Ordenar </button>
+        </form>
+        <div id="taskContainer"></div>
+    </div>
+
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
