@@ -26,6 +26,7 @@ const addNewTask = (event) => {
 
     const btnDelete = document.createElement('button')
     btnDelete.textContent = 'x'
+    btnDelete.classList.add('btnDelete')
     task.appendChild(btnDelete)
     btnDelete.addEventListener('click', (e) => {
        const item = e.target.task;
