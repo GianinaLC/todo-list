@@ -15,20 +15,19 @@
     <div class="list roundBorder">
         <div class="date">
             <div class="dateLeft">
-                <div id="dateNumber" class="dateNumberClass"></div>
+                <div id="dateNumber"></div>
                 <div>
                     <div id="dateMonth"></div>
                     <div id="dateYear"></div>
                 </div>
             </div>
-            <div id="dateText" class="dateTextClass"></div>
+            <div id="dateText"></div>
         </div>
         <form onsubmit="addNewTask(event)">
-            <input type="text" autocomplete="off" name="taskText" placeholder="Nueva tarea">
-            <button type="submit" class="formButton"> Agregar </button>
-            <button type="button" class="formButton" onclick="renderOrdererTask()"> Ordenar </button>
+            <input type="text" class="roundBorder" autocomplete="off" name="taskText" placeholder="Nueva tarea">
+            <button type="submit" class="formButton roundBorder"> Agregar </button>
         </form>
-        <div id="taskContainer" class="taskContainerClass"></div>
+        <div id="taskContainer"></div>
     </div>
 
 
