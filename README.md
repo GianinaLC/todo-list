@@ -1,9 +1,18 @@
 # TODO LIST
 
-En esta lista podrás añadir la tarea y categorizarla como personal o trabajo, luego puedes marcarla como tarea realizada, editarla o borrarla.
+
+Esta Todo List permite guardar tus tareas en el navegador.
 
 
-![image-todo-list](./img/todo-list.png)
+Puedes crear una nueva tarea, categorizarla, guardarla y si es necesario editarla también.
+
+
+No podrás guardar una tarea vacía y sin categoría.
+
+Una vez que hayas terminado, puedes marcarla como tarea realizada y posteriormente eliminarla. (Debe estar lista -done- para poder borrarla)
+
+
+![Todo list](./docs/todo-list.gif)
 
 <br><br>
 <div style="display: inline_block">
