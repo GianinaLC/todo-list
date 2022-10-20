@@ -1,4 +1,19 @@
 window.addEventListener("load", () => {
+  //infoDate
+  const dateNumber = document.getElementById('dateNumber');
+  const dateText = document.getElementById('dateText');
+  const dateMonth = document.getElementById('dateMonth');
+  const dateYear = document.getElementById('dateYear');
+
+  const setDate = () => {
+    const date = new Date();
+    dateNumber.textContent = date.toLocaleString('es', { day: 'numeric' });
+    dateText.textContent = date.toLocaleString('es', { weekday: 'long' });
+    dateMonth.textContent = date.toLocaleString('es', { month: 'short' });
+    dateYear.textContent = date.toLocaleString('es', { year: 'numeric' });
+  };
+
+  //todos es variable global
   todos = JSON.parse(localStorage.getItem("todos")) || [];
   const nameInput = document.querySelector("#name");
   const newTodoForm = document.querySelector("#new-todo-form");
@@ -21,15 +36,19 @@ window.addEventListener("load", () => {
       createdAt: new Date().getTime(),
     };
 
-    todos.push(todo);
-    localStorage.setItem("todos", JSON.stringify(todos));
+    if (todo.content != "" && todo.category != "") {
+      todos.push(todo);
+      localStorage.setItem("todos", JSON.stringify(todos));
 
-    e.target.reset();
+      e.target.reset();
 
-    DisplayTodos();
+      DisplayTodos();
+    }
   });
 
   DisplayTodos();
+  setDate()
+
 });
 
 function DisplayTodos() {
@@ -106,9 +125,12 @@ function DisplayTodos() {
       });
     });
     deleteButton.addEventListener("click", (e) => {
-      todos = todos.filter((t) => t != todo);
-      localStorage.setItem("todos", JSON.stringify(todos));
-      DisplayTodos();
+      if (todo.done == true) {
+        todos = todos.filter((t) => t != todo);
+        localStorage.setItem("todos", JSON.stringify(todos));
+        DisplayTodos();
+      }
     });
   });
+
 }

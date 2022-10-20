@@ -1,5 +1,5 @@
 :root {
-  --primary: #ea40a4;
+  --primary: #ea4079;
   --business: #3a82ee;
   --personal: var(--primary);
   --light: #eee;
@@ -14,10 +14,47 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "montserrat", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "montserrat", sans-serif;
+}
+
+.dateContent{
+	margin: 20px;
+  	background-color:  var(--grey) ;
+  	border-radius: 25px;
+}
+.date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dateRight {
+    display: flex;
+    align-items: center;
+}
+
+#dateNumber {
+    font-size: 50px;
+}
+
+#dateText {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+#dateMonth,
+#dateNumber,
+#dateText  {
+    font-weight: bold;
+}
+
+#dateMonth,
+#dateYear {
+    margin-left: 7px;
+  
 }
 
 .app {

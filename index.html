@@ -15,11 +15,25 @@
 
 <body>
     <main class="app">
+        <section class="dateContent">
+            <div class="date">
+                <div class="dateRight">
+                    <div id="dateNumber"></div>
+                    <div>
+                        <div id="dateMonth"></div>
+                        <div id="dateYear"></div>
+                    </div>
+                </div>
+                <div id="dateText"></div>
+            </div>
+        </section>
         <section class="greeting">
             <h2 class="title">
                 Hola, <input type="text" id="name" placeholder="Ingresa un nombre">
             </h2>
         </section>
+
+
 
         <section class="create-todo">
             <h3>CREAR LISTA</h3>
@@ -35,7 +49,7 @@
                     <label>
                         <input type="radio" name="category" id="category1" value="business">
                         <span class="bubble business"></span>
-                        <div>Business</div>
+                        <div>Trabajo</div>
                     </label>
                     <label>
                         <input type="radio" name="category" id="category2" value="personal">
